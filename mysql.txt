@@ -1,0 +1,104 @@
+CREATE SCHEMA `shicool` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ;
+
+CREATE TABLE `sc_manager` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `manager_name` VARCHAR(15) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL,
+  `manager_password` VARCHAR(40) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL,
+  `manager_password_str` CHAR(4) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL,
+  `manager_group` TINYINT(4) NULL DEFAULT 0,
+  `status` TINYINT(1) NULL DEFAULT 1,
+  `last_login_time` INT(10) NULL,
+  `last_login_ip` VARCHAR(20) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL,
+  `create_time` INT(10) NULL,
+  PRIMARY KEY (`id`))
+ENGINE = MyISAM
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
+
+CREATE TABLE `sc_permission` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `pid` INT NULL,
+  `permission` VARCHAR(50) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL,
+  `controller` VARCHAR(30) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL,
+  `action` VARCHAR(40) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL,
+  `type` TINYINT(1) NULL DEFAULT 1,
+  `status` TINYINT(1) NULL DEFAULT 1,
+  PRIMARY KEY (`id`))
+ENGINE = MyISAM
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
+
+CREATE TABLE `sc_permission_group` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `group_name` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL,
+  `status` TINYINT(1) NULL DEFAULT 1,
+  `createtime` INT(11) NULL,
+  PRIMARY KEY (`id`))
+ENGINE = MyISAM
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
+
+CREATE TABLE `sc_permission_group_desc` (
+  `group_id` INT NULL,
+  `permission_id` INT NULL)
+ENGINE = MyISAM
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
+
+CREATE TABLE `sc_material_category` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `pid` INT NULL,
+  `category_name` VARCHAR(40) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL,
+  `status` TINYINT(1) NULL DEFAULT 1,
+  `createtime` INT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = MyISAM
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
+
+CREATE TABLE `sc_user_category` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `user_category_name` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL,
+  `status` TINYINT(1) NULL DEFAULT 1,
+  `type` TINYINT(1) NULL DEFAULT 0,
+  `createtime` INT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = MyISAM
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
+
+CREATE TABLE `sc_user` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `user_name` CHAR(11) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL,
+  `password` CHAR(32) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL,
+  `password_str` CHAR(4) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL,
+  `nickname` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL,
+  `sex` TINYINT(1) NULL DEFAULT 0,
+  `email` VARCHAR(45) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL,
+  `user_category` TINYINT(2) NULL,
+  `isauth` TINYINT(1) NULL DEFAULT 0,
+  `createtime` INT(10) NULL,
+  `lastlogintime` INT(10) NULL,
+  PRIMARY KEY (`id`))
+ENGINE = MyISAM
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
+
+CREATE TABLE `sc_material` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `material_name` VARCHAR(60) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL,
+  `material_desc` VARCHAR(300) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL,
+  `material_category_id` INT NULL,
+  `material_user_id` INT NULL,
+  `material_img` VARCHAR(300) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL,
+  `material_url` VARCHAR(60) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL,
+  `material_small_url` VARCHAR(60) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL,
+  `material_label` VARCHAR(100) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL,
+  `isreview` TINYINT(1) NULL DEFAULT 0,
+  `type` TINYINT(1) NULL DEFAULT 1,
+  `createtime` INT(10) NULL,
+  PRIMARY KEY (`id`))
+ENGINE = MyISAM
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
+

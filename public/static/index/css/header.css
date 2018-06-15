@@ -1,0 +1,113 @@
+/**修改layui样式**/
+.layui-form-select .layui-input{
+	margin:0;
+	padding-left:20px;
+	width:100px;
+	border-radius:20px 0 0 20px;
+	font-size:12px;
+	height:33px;
+	color:#777777;
+	background-color:#FFFFFF;
+}
+.layui-form-select .layui-edge{
+	right:4px;
+}
+.layui-input-block{
+	float:left;
+	margin-left:0;
+	height:33px;
+}
+.layui-form-select dl dd.layui-this{
+	background-color:#FFCC00;
+}
+
+/******************************/
+.top{
+	padding-top:14px;
+	height:34px;
+	width:62.6%;
+	margin: auto
+}
+#top-link{
+	border:0;
+	text-align:left;
+	min-height:34px;
+}
+.top div img{
+	margin-top:-4px;
+	margin-right:2px;
+}
+.top div a:hover{
+	border-bottom:1px solid #FFCC00;
+}
+.top div{
+	text-align:center;
+	border-right:1px solid #A4A4A4;
+}
+.search{
+	width:100%;
+	position:relative;
+	height: 182px;
+	background: url('/public/static/index/images/bgd1.jpg')no-repeat;
+	background-size:100% 100%
+}
+.search-logo{
+	width:8.5%;
+	height:38%;
+	position: absolute;
+	top:26%;
+	left:27.7%;
+	background: url('/public/static/index/images/logo.png')no-repeat; 
+	background-size:100% 100%
+}
+.logo-title{
+	position:absolute;
+	top:66%;
+	left:27.7%;
+	font-size:14px;
+	letter-spacing: 0.7em;
+	color:#404034
+}
+.search-form{
+	position: absolute;
+	top:38%;
+	left:38%
+}
+.serach-title{
+	margin-left:19%;
+	font-size:13px;
+	color:#FFFDF8;
+}
+
+#search-input{
+	width:428px;
+	height:33px;
+	border-radius:0;
+	background-color:#FFFFFF;
+}
+.nav-bgd1{
+	background-color:#EBEEF0;
+	height: 80px;
+}
+.nav-bgd2{
+	height:104px;
+	background: url('/public/static/index/images/pic-48.png')
+}
+.nav{
+	width:62%;
+	margin: auto;
+}
+.nav div{
+	padding-left:7px;
+	text-align:center;
+	width:10.5%;
+	height:66px;
+	line-height:66px;   
+	overflow:hidden;
+	background: url('/public/static/index/images/pic-46.png')no-repeat;
+}
+.nav div a{
+	font-size:14px;
+	color:#D6D8D9;
+}
+

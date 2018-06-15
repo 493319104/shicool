@@ -1,0 +1,264 @@
+---------------------------------------------------------------
+[ 2018-05-29T09:52:39+08:00 ] 0.0.0.0 POST /admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_manager` [ RunTime:0.045003s ]
+[ sql ] [ SQL ] SELECT * FROM `sc_manager` WHERE  `manager_name` = 'admin' LIMIT 1 [ RunTime:0.004000s ]
+---------------------------------------------------------------
+[ 2018-05-29T09:52:39+08:00 ] 0.0.0.0 GET /admin/index/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016600s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_permission` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`controller`,`action`,`permission` FROM `sc_permission` WHERE  `type` = 1  AND `status` = 1  AND `pid` = 0 [ RunTime:0.038003s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`controller`,`action`,`permission` FROM `sc_permission` WHERE  `type` = 1  AND `status` = 1  AND `pid` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`controller`,`action`,`permission` FROM `sc_permission` WHERE  `type` = 1  AND `status` = 1  AND `pid` = 10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`controller`,`action`,`permission` FROM `sc_permission` WHERE  `type` = 1  AND `status` = 1  AND `pid` = 14 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-05-29T09:52:41+08:00 ] 0.0.0.0 GET /admin/user/category
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_user_category` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sc_user_category` LIMIT 1 [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `sc_user_category` LIMIT 0,15 [ RunTime:0.001001s ]
+---------------------------------------------------------------
+[ 2018-05-29T09:52:42+08:00 ] 0.0.0.0 GET /admin/user/category
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_user_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sc_user_category` LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `sc_user_category` LIMIT 0,15 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-05-29T10:04:36+08:00 ] 0.0.0.0 GET /admin/user/categoryAddView?id=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_user_category` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT * FROM `sc_user_category` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-05-29T10:04:45+08:00 ] 0.0.0.0 GET /admin/user/category
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_user_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sc_user_category` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `sc_user_category` LIMIT 0,15 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-05-29T10:08:45+08:00 ] 0.0.0.0 GET /admin/material/category
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_material_category` [ RunTime:0.023001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sc_material_category` LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `sc_material_category` LIMIT 0,15 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-05-29T10:08:46+08:00 ] 0.0.0.0 GET /admin/material/category
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_material_category` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sc_material_category` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `sc_material_category` LIMIT 0,15 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-05-29T15:04:52+08:00 ] 0.0.0.0 GET /admin/user/category
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_user_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sc_user_category` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `sc_user_category` LIMIT 0,15 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-05-29T15:05:50+08:00 ] 0.0.0.0 GET /admin/sys/permissionlist
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_permission` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sc_permission` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `sc_permission` ORDER BY `id` DESC LIMIT 0,15 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-05-29T15:05:51+08:00 ] 0.0.0.0 GET /admin/sys/permissionlist
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_permission` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sc_permission` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `sc_permission` ORDER BY `id` DESC LIMIT 0,15 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-05-29T15:05:52+08:00 ] 0.0.0.0 GET /admin/sys/permissionAddView
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_permission` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 0 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 2 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 3 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 4 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 5 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 6 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 7 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 8 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 9 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 11 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 12 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 13 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 14 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 15 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 16 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 17 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 18 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 19 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 20 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-05-29T15:06:37+08:00 ] 0.0.0.0 POST /admin/sys/permissionAdd
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_permission` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `sc_permission` (`pid` , `permission` , `type` , `status` , `controller` , `action`) VALUES (0 , '素材列表' , 1 , 1 , 'material' , 'material') [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-05-29T15:06:39+08:00 ] 0.0.0.0 GET /admin/sys/permissionList
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_permission` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sc_permission` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `sc_permission` ORDER BY `id` DESC LIMIT 0,15 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-05-29T15:06:40+08:00 ] 0.0.0.0 GET /admin/sys/permissionAddView
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_permission` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 0 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 2 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 3 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 4 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 5 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 6 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 7 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 8 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 9 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 11 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 12 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 13 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 14 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 15 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 16 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 17 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 18 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 19 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 21 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-05-29T15:06:58+08:00 ] 0.0.0.0 POST /admin/sys/permissionAdd
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_permission` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `sc_permission` (`pid` , `permission` , `type` , `status` , `controller` , `action`) VALUES (21 , '添加素材' , 1 , 1 , 'material' , 'materialaddview') [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-05-29T15:07:00+08:00 ] 0.0.0.0 GET /admin/sys/permissionList
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_permission` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sc_permission` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `sc_permission` ORDER BY `id` DESC LIMIT 0,15 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-05-29T15:07:14+08:00 ] 0.0.0.0 GET /admin/sys/permissionAddView
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_permission` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 0 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 2 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 3 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 4 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 5 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 6 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 7 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 8 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 9 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 11 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 12 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 13 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 14 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 15 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 16 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 17 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 18 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 19 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 21 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 22 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-05-29T15:07:37+08:00 ] 0.0.0.0 POST /admin/sys/permissionAdd
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_permission` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `sc_permission` (`pid` , `permission` , `type` , `status` , `controller` , `action`) VALUES (21 , '提交素材添加' , 0 , 0 , 'material' , 'materialadd') [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-05-29T15:07:38+08:00 ] 0.0.0.0 GET /admin/sys/permissionList
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_permission` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sc_permission` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `sc_permission` ORDER BY `id` DESC LIMIT 0,15 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-05-29T15:07:40+08:00 ] 0.0.0.0 GET /admin/index/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_permission` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`controller`,`action`,`permission` FROM `sc_permission` WHERE  `type` = 1  AND `status` = 1  AND `pid` = 0 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`controller`,`action`,`permission` FROM `sc_permission` WHERE  `type` = 1  AND `status` = 1  AND `pid` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`controller`,`action`,`permission` FROM `sc_permission` WHERE  `type` = 1  AND `status` = 1  AND `pid` = 10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`controller`,`action`,`permission` FROM `sc_permission` WHERE  `type` = 1  AND `status` = 1  AND `pid` = 14 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`controller`,`action`,`permission` FROM `sc_permission` WHERE  `type` = 1  AND `status` = 1  AND `pid` = 21 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-05-29T15:07:52+08:00 ] 0.0.0.0 GET /admin/sys/permissionlist
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_permission` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sc_permission` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `sc_permission` ORDER BY `id` DESC LIMIT 0,15 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-05-29T15:07:58+08:00 ] 0.0.0.0 GET /admin/sys/permissionAddView?id=21
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_permission` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `sc_permission` WHERE  `id` = 21 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 0 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 2 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 3 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 4 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 6 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 7 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 8 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 9 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 11 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 12 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 13 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 14 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 15 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 16 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 17 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 18 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 19 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 20 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 21 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 22 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`permission` FROM `sc_permission` WHERE  `pid` = 23 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-05-29T15:08:05+08:00 ] 0.0.0.0 POST /admin/sys/permissionAdd
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_permission` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `sc_permission`  SET `pid`=10,`permission`='素材列表',`type`=1,`status`=1,`controller`='material',`action`='material'  WHERE  `id` = 21 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-05-29T15:08:07+08:00 ] 0.0.0.0 GET /admin/sys/permissionList
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_permission` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sc_permission` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `sc_permission` ORDER BY `id` DESC LIMIT 0,15 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-05-29T15:08:07+08:00 ] 0.0.0.0 GET /admin/index/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_permission` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`controller`,`action`,`permission` FROM `sc_permission` WHERE  `type` = 1  AND `status` = 1  AND `pid` = 0 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`controller`,`action`,`permission` FROM `sc_permission` WHERE  `type` = 1  AND `status` = 1  AND `pid` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`controller`,`action`,`permission` FROM `sc_permission` WHERE  `type` = 1  AND `status` = 1  AND `pid` = 10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`controller`,`action`,`permission` FROM `sc_permission` WHERE  `type` = 1  AND `status` = 1  AND `pid` = 14 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-05-29T15:08:10+08:00 ] 0.0.0.0 GET /admin/material/material
+[ error ] [8]未定义变量: materialList
+---------------------------------------------------------------
+[ 2018-05-29T15:08:11+08:00 ] 0.0.0.0 GET /admin/material/material
+[ error ] [8]未定义变量: materialList
+---------------------------------------------------------------
+[ 2018-05-29T15:09:02+08:00 ] 0.0.0.0 GET /admin/material/material
+[ error ] [8]未定义变量: categoryList
+---------------------------------------------------------------
+[ 2018-05-29T15:09:15+08:00 ] 0.0.0.0 GET /admin/material/material
+[ error ] [0]致命错误: Call to a member function render() on array
+---------------------------------------------------------------
+[ 2018-05-29T15:38:48+08:00 ] 0.0.0.0 GET /admin/sys/permissionlist
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_permission` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sc_permission` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `sc_permission` ORDER BY `id` DESC LIMIT 0,15 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-05-29T15:38:48+08:00 ] 0.0.0.0 GET /admin/sys/permissionlist
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_permission` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sc_permission` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `sc_permission` ORDER BY `id` DESC LIMIT 0,15 [ RunTime:0.000000s ]

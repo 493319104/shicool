@@ -1,0 +1,78 @@
+{extend name="./public/base" /}
+{block name="content"}
+<script src="_JS_/admin/sys.js"></script>
+{if condition="$act eq 'manager'"}
+<div class="layui-form-item">
+    <button class="layui-btn" onclick="location.href='/admin/sys/addManagerView'">添加管理员</button>
+</div>
+<table class="layui-table">
+    <thead>
+    <tr>
+        <th>管理员名称</th>
+        <th>是否使用</th>
+        <th>所属权限组</th>
+        <th>创建日期</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    {foreach $managerList as $val}
+    <tr>
+        <td>{$val.manager_name}</td>
+        <td>{$val.status == 1 ? "使用" : "不使用"}</td>
+        <td>{if condition="$val.group_name eq ''"}超级管理员{else}{$val.group_name}{/if}</td>
+        <td>{$val.create_time|date='Y-m-d H:i:s', ###}</td>
+        <td></td>
+        <!--<td><a href="/admin/sys/addManagerView?id={$val.id}">编辑</a></td>-->
+    </tr>
+    {/foreach}
+    {if condition="$managerList->render() neq ''"}
+    <tr><td colspan="5">{$managerList->render()}</td></tr>
+    {/if}
+    </tbody>
+</table>
+{elseif condition="$act eq 'managerAdd'"}
+<div class="layui-form">
+    <div class="layui-form-item">
+        <label class="layui-form-label">用户名</label>
+        <div class="layui-input-inline">
+            <input type="text" name="username" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+        </div>
+        <div class="layui-form-mid layui-word-aux">3-15位数字、字母或下划线组合</div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">密码</label>
+        <div class="layui-input-inline">
+            <input type="password" name="password" placeholder="请输入密码" autocomplete="off" class="layui-input">
+        </div>
+        <div class="layui-form-mid layui-word-aux">6-20位数字、字母</div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">是否使用</label>
+        <div class="layui-input-inline">
+            <select name="status">
+                <option value="1">是</option>
+                <option value="0">否</option>
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">所属权限</label>
+        <div class="layui-input-inline">
+            <select name="group">
+                {foreach $permissionGroupList as $val}
+                <option value="{$val.id}">{$val.group_name}</option>
+                {/foreach}
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="formDemo" onclick="$.sys.addManager();">提交</button>
+        </div>
+    </div>
+</div>
+{else}
+
+{/if}
+{/block}

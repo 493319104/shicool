@@ -1,0 +1,85 @@
+{extend name="./public/base" /}
+{block name="content"}
+<script src="_JS_/admin/sys.js"></script>
+{if condition="$act eq 'permissionList'"}
+<div class="layui-form-item">
+    <button class="layui-btn" onclick="location.href='/admin/sys/permissionGroupAddView'">添加权限组</button>
+</div>
+<table class="layui-table">
+    <thead>
+    <tr>
+        <th>权限组名称</th>
+        <th>是否发布</th>
+        <th>创建时间</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    {foreach $permissionGroupList as $val}
+        <tr>
+            <td>{$val.group_name}</td>
+            <td>{$val.status == 1 ? "发布" : "不发布"}</td>
+            <td>{$val.createtime|date='Y-m-d H:i:s', ###}</td>
+            <td><a href="/admin/sys/permissionGroupAddView?id={$val.id}">编辑</a></td>
+        </tr>
+    {/foreach}
+    {if condition="$permissionGroupList->render() neq ''"}
+    <tr><td colspan="5">{$permissionGroupList->render()}</td></tr>
+    {/if}
+    </tbody>
+</table>
+{else}
+<div class="layui-form">
+    <input type="hidden" name="id" value="{$permissionGroupInfo['id'] ?? ''}"/>
+    <div class="layui-form-item">
+        <label class="layui-form-label">权限组名称</label>
+        <div class="layui-input-inline">
+            <input type="text" name="permissionGroupName" autocomplete="off" class="layui-input" value="{$permissionGroupInfo['group_name'] ?? ''}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">是否发布</label>
+        <div class="layui-input-inline">
+            <select name="status">
+                {if condition="isset($permissionGroupInfo['status'])"}
+                <option value="1" {$permissionGroupInfo['status'] == 1 ? "selected" : ""} >是</option>
+                <option value="0" {$permissionGroupInfo['status'] == 0 ? "selected" : ""} >否</option>
+                {else /}
+                <option value="1" >是</option>
+                <option value="0" >否</option>
+                {/if}
+            </select>
+        </div>
+    </div>
+    <div class=""layui-form-item>
+        <label class="layui-form-label" style="text-align: left; padding-left: 0;font-size: 18px;">选择权限:</label>
+    </div>
+    <table class="layui-table">
+        {foreach $permissionList as $val}
+        <tr>
+            <td>
+                <div class="layui-form-item">
+                    <div class="layui-input-inline">
+                        <input type="checkbox" name="permission" title="{$val.permission}" value="{$val.id}" {if condition="in_array($val['id'],$groupDescList)"} checked {/if}>
+                    </div>
+                </div>
+            </td>
+            <td>
+            {foreach $val.child as $valc}
+                <div class="layui-input-inline">
+                    <input type="checkbox" name="permission" title="{$valc.permission}" value="{$valc.id}" {if condition="in_array($valc['id'],$groupDescList)"} checked {/if}>
+                </div>
+            {/foreach}
+            </td>
+        </tr>
+        {/foreach}
+    </table>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit onclick="$.sys.permissionGroupAdd();">提交</button>
+        </div>
+    </div>
+</div>
+{/if}
+
+{/block}

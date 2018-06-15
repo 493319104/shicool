@@ -1,0 +1,41 @@
+---------------------------------------------------------------
+[ 2018-05-25T14:05:39+08:00 ] 0.0.0.0 POST /admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_manager` [ RunTime:0.049003s ]
+[ sql ] [ SQL ] SELECT * FROM `sc_manager` WHERE  `manager_name` = 'admin' LIMIT 1 [ RunTime:0.004000s ]
+---------------------------------------------------------------
+[ 2018-05-25T14:05:39+08:00 ] 0.0.0.0 GET /admin/index/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_permission` [ RunTime:0.024001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`controller`,`action`,`permission` FROM `sc_permission` WHERE  `type` = 1  AND `status` = 1  AND `pid` = 0 [ RunTime:0.038003s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`controller`,`action`,`permission` FROM `sc_permission` WHERE  `type` = 1  AND `status` = 1  AND `pid` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`controller`,`action`,`permission` FROM `sc_permission` WHERE  `type` = 1  AND `status` = 1  AND `pid` = 10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`controller`,`action`,`permission` FROM `sc_permission` WHERE  `type` = 1  AND `status` = 1  AND `pid` = 14 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-05-25T14:05:41+08:00 ] 0.0.0.0 GET /admin/user/userlist
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_user` [ RunTime:0.023001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sc_user` LIMIT 1 [ RunTime:0.024001s ]
+[ sql ] [ SQL ] SELECT * FROM `sc_user` LIMIT 0,15 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_user_category` [ RunTime:0.023001s ]
+[ sql ] [ SQL ] SELECT * FROM `sc_user_category` [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-05-25T14:05:42+08:00 ] 0.0.0.0 GET /admin/user/userlist
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sc_user` LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `sc_user` LIMIT 0,15 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_user_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `sc_user_category` [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-05-25T14:05:44+08:00 ] 0.0.0.0 GET /admin/sys/permissionlist
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_permission` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sc_permission` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `sc_permission` ORDER BY `id` DESC LIMIT 0,15 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-05-25T14:05:45+08:00 ] 0.0.0.0 GET /admin/sys/permissionlist
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;port=3306;dbname=shicool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sc_permission` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sc_permission` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `sc_permission` ORDER BY `id` DESC LIMIT 0,15 [ RunTime:0.001000s ]

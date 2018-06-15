@@ -1,0 +1,70 @@
+{extend name="./public/base" /}
+{block name="content"}
+<script src="_JS_/admin/material.js"></script>
+{if condition="$act eq 'category'"}
+<div class="layui-form-item">
+    <button class="layui-btn" onclick="location.href='/admin/material/categoryAddView'">添加素材分类</button>
+</div>
+<table class="layui-table">
+    <thead>
+    <tr>
+        <th>素材分类名称</th>
+        <th>是否发布</th>
+        <th>创建时间</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    {foreach $categoryList as $val}
+    <tr>
+        <td>{$val.category_name}</td>
+        <td>{$val.status == 1 ? "发布" : "不发布"}</td>
+        <td>{$val.createtime|date='Y-m-d H:i:s', ###}</td>
+        <td><a href="/admin/material/categoryAddView?id={$val.id}">编辑</a></td>
+    </tr>
+    {/foreach}
+    {if condition="$categoryList->render() neq ''"}
+    <tr><td colspan="5">{$categoryList->render()}</td></tr>
+    {/if}
+    </tbody>
+</table>
+{else}
+<div class="layui-form">
+    <input type="hidden" name="id" value="{$categoryInfo['id'] ?? ''}"/>
+    <div class="layui-form-item">
+        <label class="layui-form-label">素材分类名称</label>
+        <div class="layui-input-inline">
+            <input type="text" name="categoryName" autocomplete="off" class="layui-input" value="{$categoryInfo['category_name'] ?? ''}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">父级</label>
+        <div class="layui-input-inline">
+            <select name="pid">
+                <option value="0">顶级素材</option>
+                {$categoryTree}
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">是否发布</label>
+        <div class="layui-input-inline">
+            <select name="status">
+                {if condition="isset($categoryInfo['status'])"}
+                <option value="1" {$categoryInfo['status'] == 1 ? "selected" : ""} >是</option>
+                <option value="0" {$categoryInfo['status'] == 0 ? "selected" : ""} >否</option>
+                {else /}
+                <option value="1" >是</option>
+                <option value="0" >否</option>
+                {/if}
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="formDemo" onclick="$.material.categoryAdd();">提交</button>
+        </div>
+    </div>
+</div>
+{/if}
+{/block}

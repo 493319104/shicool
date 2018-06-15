@@ -1,0 +1,32 @@
+{extend name="./public/base" /}
+{block name="content"}
+<div class="layui-form-item">
+    <button class="layui-btn" onclick="location.href='/admin/sys/permissionAddView'">添加权限</button>
+</div>
+<table class="layui-table">
+    <thead>
+    <tr>
+        <th>权限名</th>
+        <th>加控制器 / 方法</th>
+        <th>是否需要认证</th>
+        <th>是否发布</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    {foreach $permissionList as $val}
+    <tr>
+        <td>{$val.permission}</td>
+        <td>{$val.controller} / {$val.action}</td>
+        <td>{$val.type == 1 ? "是" : "否"}</td>
+        <td>{$val.status == 1 ? "发布" : "不发布"}</td>
+        <td><a href="/admin/sys/permissionAddView?id={$val.id}">编辑</a></td>
+    </tr>
+    {/foreach}
+    {if condition="$permissionList->render() neq ''"}
+    <tr><td colspan="5">{$permissionList->render()}</td></tr>
+    {/if}
+    </tbody>
+</table>
+
+{/block}

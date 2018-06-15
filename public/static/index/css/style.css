@@ -1,0 +1,214 @@
+*{
+	margin:0;
+	padding:0;
+	font-family:'微软雅黑';
+}
+.layui-fluid{
+	margin:0;
+	padding: 0;
+	min-width: 1280px;
+}
+.page-body{
+	background-color:#EBEEF0;
+}
+/**轮播图区域样式**/
+.carousel-album{
+	width:62%
+	;margin:auto;
+	height:476px;
+	padding-top:13px;
+}
+#carousel div img{
+	border-radius: 10px;
+}
+#album{
+	height:432px;
+	margin:0.6% 0 0 0.83%;
+}
+.album-top{
+	position:relative;
+	height:285px
+}
+.album-top-position,.top-position-outside,.top-position-inside{
+	height: 277px; 
+	border-right:2px solid #D1D1D1;
+	border-bottom:2px solid #D1D1D1;
+	width: 100%;
+	background-color: #FFFFFF;
+	border-radius: 8px;
+	position: absolute;
+	right:-2.5%;
+	bottom:-1%;;
+}
+.top-position-outside{
+	right:0.6%;
+	bottom:1.1%
+}
+.top-position-inside{
+	border: 0;
+	right:0.7%;
+	bottom:1.2%
+}
+.album-top-mark{
+	position:absolute;
+	top:-1%;
+	right:1%;
+}
+.album-top-title{
+	position:absolute;
+	bottom:0;
+	height: 35px;
+	width:100%;
+	background:rgba(149,151,146,0.6);
+	border-bottom-right-radius:8px;
+	border-bottom-left-radius:10px;
+}
+.album-top-title div{
+	color:#FFFFFF;
+	font-size:15px;
+	text-align: center;
+	line-height: 35px;
+}
+.album-bottom{
+	position:relative;
+	height: 141px;
+	width:101%;
+}
+.album-bottom-position,.bottom-position-outside,.bottom-position-inside{
+	height: 135px;
+	border-right:0.5px solid #D1D1D1;
+	border-bottom:0.5px solid #D1D1D1;
+	width: 100%;
+	background-color: #FFFFFF;
+	border-radius: 8px;
+	position: absolute;
+	left:3%;
+	bottom:0;
+}
+.bottom-position-outside{
+	left: -1.2%;
+	bottom:2%
+}
+.bottom-position-inside{
+	border-radius: 10px;
+	left:-1.2%;
+	bottom:1.5%;
+	border:0;
+}
+.album-bottom-mark{
+	position:absolute;
+	top:-2.5%;
+	right:1%;
+}
+.album-buttom-title{
+	position:absolute;
+	bottom:0;
+	height: 25px;
+	width:100%;
+	background:rgba(149,151,146,0.6);
+	border-bottom-right-radius:8px;
+	border-bottom-left-radius:10px;
+}
+.album-buttom-title div{
+	color:#FFFFFF;
+	font-size:15px;
+	text-align: center;
+	line-height: 25px;
+}
+.title-img{
+	margin-top:-27px;width:100%;height:103px;
+	background: url('/public/static/index/images/pic-50.png')no-repeat;
+	background-size:100% 100%
+}
+/**精选专辑区域样式**/
+.choice{
+	width:64%;
+	margin: auto;
+	margin-top:10px;
+}
+
+.choice-album{
+	margin-top: 10px;
+	margin-left: 5px;
+}
+.choice-album-chind{
+	height:166px;
+	position: relative
+}
+.album-chind-position,.chind-position-outside,.chind-position-inside{
+	height: 160px; 
+	border-right:0.5px solid #D1D1D1;
+	border-bottom:0.5px solid #D1D1D1;
+	width: 100%;
+	background-color: #FFFFFF;
+	border-radius: 8px;
+	position: absolute;
+	right:0;
+	bottom:0;
+}
+.chind-position-outside,.chind-position-inside{
+	right:1%;
+	bottom:2%
+}
+.choice-album-title{
+	position:absolute;
+	height:25px;
+	background:rgba(149,151,146,0.6);
+	width:100%;
+	border-bottom-right-radius:8px;
+	border-bottom-left-radius:10px;
+	bottom:0;
+}
+.choice-album-title div{
+	color:#FFFFFF;
+	font-size:15px;
+	text-align: center;
+	line-height: 25px;
+}
+
+/**广告区域样式**/
+.annouce{
+	background-color:#FFFFFF;
+	height: 40px;
+	line-height:40px;
+	font-size:16px;
+	color: #484848;
+	border-radius:5px;
+}
+.annouce img{
+	margin: -5px 3px 0 15px;
+	border-radius:5px;
+}
+.news{
+	background-color:#FAFAFA;
+	height: 115px;
+	font-size:14px;
+	color: #9a9a9a
+}
+.news ul{
+	margin: 5px 0 0 20px;
+}
+.news ul li{
+	list-style-type:disc;
+	margin-left: 10px;
+	margin-bottom: 8px;
+}
+.adver{
+	height:106px;
+	margin-top: 9px;
+}
+.adver img{
+	width: 100%;height: 100%;
+}
+
+/**作品推荐区域样式**/
+.recommend{
+	width:62.3%;
+	height:466px;
+	margin: 0 auto;
+	margin-top:20px;
+}
+.title-bgd{
+	height:55px;
+	line-height:55px;
+}

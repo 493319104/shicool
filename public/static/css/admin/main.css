@@ -1,0 +1,158 @@
+a, a:active, a:hover, a:link, a:visited {
+    text-decoration: none;
+}
+body, button, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, html, iframe, input, li, p, select, table, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    background-color: #fff;
+    min-width: 1190px;
+    height: 100%;
+}
+img {
+    border: 0;
+    vertical-align: top;
+}
+li,ul {
+    list-style-type: none;
+}
+.clear {
+    diplay: block!important;
+    float: none!important;
+    clear: both;
+    overflow: hidden;
+    width: auto!important;
+    height: 0!important;
+    margin: 0 auto!important;
+    padding: 0!important;
+    font-size: 0;
+    line-height: 0;
+}
+.login {
+    width: 100%;
+    height: 100%;
+}
+.login-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 330px;
+    width: 450px;
+    background-color: #393D49;
+    border-radius: 10px;
+}
+.login-form header {
+    padding: 10px;
+    border: 1px solid #eff8ff;
+}
+.login-form header h1 {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #eff8ff;
+    font-size: 25px;
+}
+.login-table {
+    height: 185px;
+    padding: 30px 90px 0;
+}
+.login-form .layui-form-item {
+    position: relative;
+}
+.login-form .layui-form-item .beg-login-icon {
+    position: absolute;
+    color: #cccccc;
+    top: 10px;
+    left: 10px;
+}
+.login-form .layui-form-item input {
+    padding-left: 34px;
+}
+.beg-pull-left {
+    float: left !important;
+}
+
+.beg-pull-right {
+    float: right !important;
+}
+.beg-clear {
+    clear: both;
+}
+.beg-login-remember {
+    line-height: 38px;
+}
+.layui-body iframe {
+    min-width: 980px;
+}
+.conment-div {
+    min-width: 980px;
+    margin-top: 10px;
+    overflow-y: auto;
+    height: 100%;
+}
+.layui-layout-body .layui-body {
+    min-width: 980px;
+}
+.layui-body ul.layui-tab-title {
+    height: 30px;
+}
+.layui-tab-title .layui-this:after {
+    height: 31px;
+}
+.layui-tab-title li {
+    line-height: 30px;
+}
+.layui-table a {
+    color: #009688 !important;
+}
+.layui-table a:hover {
+    text-decoration: underline;
+}
+.file-input {
+    width: 25% !important;
+    display: inline-block;
+}
+.uploadsubmit {
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 18px;
+    background-color: #009688;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    opacity: .9;
+}
+.progress {
+    position:relative;
+    width:400px;
+    border: 1px solid #ddd;
+    padding: 1px;
+    border-radius: 3px;
+}
+.bar {
+    background-color: #B4F5B4;
+    width:0%;
+    height:20px;
+    border-radius: 3px;
+}
+.percent {
+    position:absolute;
+    display:inline-block;
+    top:3px;
+    left:48%;
+}

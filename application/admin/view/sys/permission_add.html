@@ -1,0 +1,67 @@
+{extend name="./public/base" /}
+{block name="content"}
+<script src="_JS_/admin/sys.js"></script>
+<div class="layui-form">
+    <input type="hidden" name="id" value="{$permissionInfo['id'] ?? ''}"/>
+    <div class="layui-form-item">
+        <label class="layui-form-label">权限名称</label>
+        <div class="layui-input-inline">
+            <input type="text" name="permissionName" autocomplete="off" class="layui-input" value="{$permissionInfo['permission'] ?? ''}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">控制器</label>
+        <div class="layui-input-inline">
+            <input type="text" name="controller" autocomplete="off" class="layui-input" value="{$permissionInfo['controller'] ?? ''}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">方法</label>
+        <div class="layui-input-inline">
+            <input type="text" name="action" autocomplete="off" class="layui-input" value="{$permissionInfo['action'] ?? ''}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">父级</label>
+        <div class="layui-input-inline">
+            <select name="pid">
+                <option value="0">顶级权限</option>
+                {$permissionTree}
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">是否需要认证</label>
+        <div class="layui-input-inline">
+            <select name="type">
+                {if condition="isset($permissionInfo['type'])"}
+                <option value="1" {$permissionInfo['type'] == 1 ? "selected" : ""} >是</option>
+                <option value="0" {$permissionInfo['type'] == 0 ? "selected" : ""} >否</option>
+                {else /}
+                <option value="1" >是</option>
+                <option value="0" >否</option>
+                {/if}
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">是否发布</label>
+        <div class="layui-input-inline">
+            <select name="status">
+                {if condition="isset($permissionInfo['status'])"}
+                <option value="1" {$permissionInfo['status'] == 1 ? "selected" : ""} >是</option>
+                <option value="0" {$permissionInfo['status'] == 0 ? "selected" : ""} >否</option>
+                {else /}
+                <option value="1" >是</option>
+                <option value="0" >否</option>
+                {/if}
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="formDemo" onclick="$.sys.permissionAdd();">提交</button>
+        </div>
+    </div>
+</div>
+{/block}
